@@ -1,97 +1,106 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0; /* Dengan menyetel margin menjadi 0, Anda menghilangkan semua ruang kosong di luar elemen. Ini sering digunakan untuk menghapus margin default dari elemen HTML seperti body, h1, p, dll., sehingga layout dapat diatur dengan lebih presisi. */ 
+    padding: 0; /* Menyetel padding menjadi 0 menghilangkan semua ruang kosong di dalam elemen, memungkinkan kontrol penuh atas tata letak dan jarak dalam elemen. */
+    box-sizing: border-box; /* padding dan border termasuk dalam perhitungan total lebar dan tinggi elemen. Ini membuat tata letak lebih intuitif dan mudah diatur karena ukuran total elemen tidak akan bertambah saat menambahkan padding atau border. */
+    font-family: Arial, Helvetica, sans-serif; /* menentukan jenis huruf yang digunakan. Dalam contoh ini, Arial adalah pilihan pertama, Helvetica adalah cadangan jika Arial tidak tersedia, dan sans-serif adalah jenis huruf generik yang digunakan jika keduanya tidak tersedia. Menggunakan daftar ini memastikan teks akan tetap tampil dengan gaya yang diinginkan pada berbagai perangkat dan browser. */
 }
 
 body {
-    color: rgb(11,11,11);
+    color: rgb(11,11,11); /* Teks di dalam elemen body akan berwarna hampir hitam (sangat gelap) dengan kode RGB (11, 11, 11). */
 }
 
 .header {
-    position: fixed;
-    top: 0;
+    position: fixed; /* Elemen akan tetap di tempatnya bahkan saat halaman di-scroll. */
+
+    /* Elemen .header akan ditempatkan di sudut kiri atas halaman. */
+    top: 0; 
     left: 0;
-    width: 100%;
+
+    width: 100%; /* Lebar elemen .header akan sebesar 100% dari lebar viewport. */
+
+    /* Ruang dalam elemen diatur sebesar 20px untuk semua sisi kecuali sisi kanan, yang diatur sebesar 10% dari lebar elemen. Ini memberikan ruang antara konten di dalam elemen dan tepi elemen. */
     padding: 20px 20px;
     padding-right: 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    color: rgb(255,255,255);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: rgba(0, 0, 0, 0.150);
+
+    display: flex; /* Elemen anak dari .header akan diatur menggunakan model flexbox. */
+    justify-content: space-between; /* Elemen anak akan ditempatkan dengan ruang yang merata di antara mereka, dengan elemen pertama di posisi awal dan elemen terakhir di posisi akhir dari flex container. */
+    align-items: center; /* Elemen anak akan diatur di tengah secara vertikal dalam flex container. */
+    z-index: 100; /*  Elemen .header akan berada di atas elemen lain dengan z-index yang lebih rendah. */
+    color: rgb(255,255,255); /* Teks dalam elemen .header akan berwarna putih. */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Teks akan menggunakan font 'Gill Sans' jika tersedia, atau font lain dalam daftar secara berurutan jika 'Gill Sans' tidak tersedia, hingga 'sans-serif' sebagai alternatif terakhir. */
+    background-color: rgba(0, 0, 0, 0.150); /* Latar belakang elemen .header akan berwarna hitam dengan transparansi 15%, yang memberikan efek semi-transparan. */
 }
 
 .mylogo {
-    position: relative;
-    font-size: 25px;
-    color: rgb(255,255,255);
-    text-decoration: none;
-    font-weight: 800;
-    cursor: pointer;
+    position: relative; /* Elemen .mylogo dapat diposisikan menggunakan properti top, right, bottom, atau left relatif terhadap posisi aslinya, tanpa mengeluarkannya dari aliran dokumen normal. */
+    font-size: 25px; /* Ukuran teks di dalam elemen .mylogo akan menjadi 25 piksel. */
+    color: rgb(255,255,255); /* Teks dalam elemen .mylogo akan berwarna putih. */
+    text-decoration: none; /* Teks dalam elemen .mylogo tidak akan memiliki garis bawah atau dekorasi teks lainnya. */
+    font-weight: 800; /* Teks dalam elemen .mylogo akan ditampilkan sangat tebal. */
+    cursor: pointer; /* Kursor akan berubah menjadi bentuk tangan (pointer) saat berada di atas elemen .mylogo, menandakan elemen ini dapat diklik. */
 }
 
 .navbar a {
-    position: relative;
-    font-size: 1.1em;
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-    margin-left: 30px;
+    position: relative; /* Elemen link (<a>) dalam .navbar dapat diposisikan menggunakan properti top, right, bottom, atau left relatif terhadap posisi aslinya, tanpa mengeluarkannya dari aliran dokumen normal. */
+    font-size: 1.1em; /*  Ukuran teks akan 1.1 kali ukuran font elemen induknya, sedikit lebih besar dari ukuran standar. */
+    color: white; /* Teks link dalam .navbar akan berwarna putih. */
+    text-decoration: none; /* Teks link tidak akan memiliki garis bawah atau dekorasi teks lainnya. */
+    font-weight: 700; /* Teks link dalam .navbar akan ditampilkan tebal. */
+    margin-left: 30px; /* Setiap link dalam .navbar akan memiliki jarak 30 piksel dari elemen sebelumnya di sebelah kirinya, memberikan ruang antar link. */
 }
 
 .navbar a:hover {
-    color: blue;
-}
+    color: blue; /* Ketika pengguna melayang (hover) di atas link dalam .navbar, warna teks akan berubah menjadi biru, memberikan efek visual bahwa link dapat diklik. */
+} 
 
 .home {
-    position: relative;
-    width: 100%;
-    justify-content: space-between;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    background-color: rgb(0, 0, 50);
-    padding: 70px 10%;
+    position: relative; /* Elemen .home dapat diposisikan menggunakan properti top, right, bottom, atau left relatif terhadap posisi aslinya, tanpa mengeluarkannya dari aliran dokumen normal. */
+    width: 100%; /* Lebar elemen .home akan sebesar 100% dari lebar elemen induknya. */
+    justify-content: space-between; /*  Elemen anak dari .home akan ditempatkan dengan ruang yang merata di antara mereka. */
+    height: 100vh; /* Tinggi elemen .home akan sebesar 100% dari tinggi viewport, membuatnya selalu memenuhi tinggi layar. */
+    background-size: cover; /* Gambar latar belakang akan diubah ukurannya untuk menutupi seluruh elemen, menjaga rasio aspek dan memotong gambar jika perlu. */
+    background-position: center; /* Gambar latar belakang akan diposisikan di tengah elemen. */
+    display: flex; /* Elemen anak dari .home akan diatur menggunakan model flexbox. */
+    align-items: center; /* Elemen anak akan diatur di tengah secara vertikal dalam flex container. */
+    background-color: rgb(0, 0, 50); /* Latar belakang elemen .home akan berwarna biru tua (kode RGB: 0, 0, 50). */
+    padding: 70px 10%; /*  Elemen .home akan memiliki padding sebesar 70 piksel di bagian atas dan bawah, serta 10% dari lebar elemen di bagian kiri dan kanan. */
 }
 
 .content {
-    max-width: 600px;
+    max-width: 600px; /* Lebar elemen .content akan dibatasi maksimal 600 piksel, mencegahnya menjadi lebih lebar dari nilai ini. */
 }
 
 .content h3 {
-    font-size: 32px;
-    font-weight: 700;
-    color: rgb(235,235,235);
+    font-size: 32px; /* Ukuran teks dalam elemen <h3> akan menjadi 32 piksel. */
+    font-weight: 700; /* Teks dalam elemen <h3> akan ditampilkan tebal. */
+    color: rgb(235,235,235); /* Teks dalam elemen <h3> akan berwarna abu-abu terang (kode RGB: 235, 235, 235). */
 }
 
 .content h1 {
-    font-size: 50px;
-    font-weight: 700;
-    margin: -3px 0;
-    color: white;
+    font-size: 50px; /* Teks dalam elemen <h1> akan ditampilkan dengan ukuran 50 piksel. */
+    font-weight: 700; /* Teks dalam elemen <h1> akan ditampilkan dengan ketebalan font yang sangat tebal (700). */
+    margin: -3px 0; /* Elemen <h1> akan memiliki margin negatif sebesar 3 piksel di bagian atas dan bawah, serta margin 0 piksel di bagian kiri dan kanan. Margin negatif mengurangi ruang di sekitar elemen, sering digunakan untuk mengkompensasi spasi ekstra yang mungkin dihasilkan oleh elemen lain. */
+    color: white; /* Teks dalam elemen <h1> akan berwarna putih. */
 }
 
 span {
-    color: blue;
+    color: blue; /* Semua teks dalam elemen <span> akan berwarna biru.*/
 }
 
 .content p {
-    display: inline;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 40px;
+    display: inline; /* Elemen <p> akan ditampilkan sebagai elemen inline, sehingga akan berada dalam satu baris dengan elemen lainnya. */
+    justify-content: center; /* Semua elemen anak dalam container flex akan ditempatkan di tengah secara horizontal. */
+    align-items: center; /* Semua elemen anak dalam container flex akan ditempatkan di tengah secara vertikal. */
+    position: relative; /* Elemen <p> dapat diposisikan menggunakan properti top, right, bottom, atau left relatif terhadap posisi aslinya. */
+
+    /* Lebar dan tinggi elemen <p> masing-masing akan diatur menjadi 40 piksel. */
+    width: 40px; 
     height: 40px;
-    font-size: 20px;
-    color: rgb(183,183,183);
-    text-decoration: none;
-    margin: 30px 15px 30px 0;
+
+    font-size: 20px; /* Ukuran teks dalam elemen <p> akan menjadi 20 piksel. */
+    color: rgb(183,183,183); /* Teks dalam elemen <p> akan berwarna abu-abu (kode RGB: 183, 183, 183). */
+    text-decoration: none; /* Teks dalam elemen <p> tidak akan memiliki garis bawah atau dekorasi teks lainnya. */
+    margin: 30px 15px 30px 0; /* Elemen <p> akan memiliki margin 30 piksel di bagian atas dan bawah, 15 piksel di sebelah kanan, dan 0 piksel di sebelah kiri. */
 }
 
 img {
@@ -104,11 +113,7 @@ img {
 img {
     max-width: 80%; /* Mengatur lebar gambar maksimum menjadi 100% dari lebar kontainer */
     max-height: auto; /* Memastikan gambar tidak melampaui tinggi kontainer */
-    object-fit: cover;
-}
-
-html {
-    scroll-behavior: smooth;
+    object-fit: cover; /* Konten media akan diperbesar atau diperkecil sedemikian rupa sehingga menutupi seluruh kontainer. Bagian konten yang melampaui ukuran kontainer akan terpotong (crop) untuk mempertahankan rasio aspek. */
 }
 
 
